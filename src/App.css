@@ -1,42 +1,64 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.app {
+  font-family: Arial, sans-serif;
   text-align: center;
+  background-color: #1e1e1e;
+  color: #f4f4f4;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.board {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  width: 90vw;
+  max-width: 300px;
+  aspect-ratio: 1; /* Keep board square */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.cell {
+  width: 100%;
+  aspect-ratio: 1; /* Keep cells square */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2e2e2e;
+  border: 2px solid #555;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #f4f4f4;
 }
 
-.card {
-  padding: 2em;
+.cell:hover {
+  background-color: #444;
 }
 
-.read-the-docs {
-  color: #888;
+.winner {
+  margin-bottom: 1rem;
+}
+
+.winner button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #f4f4f4;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.winner button:hover {
+  background-color: #0056b3;
 }
