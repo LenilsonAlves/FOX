@@ -61,7 +61,7 @@ function App() {
       <h1>Jogo da Velha</h1>
       {winner ? (
         <div className="winner">
-          {winner === 'Empate' ? 'Empate!' : Vencedor: ${winner}}
+          {winner === 'Empate' ? 'Empate!' : `Vencedor: ${winner}`}
           <button onClick={resetGame}>Jogar Novamente</button>
         </div>
       ) : (
